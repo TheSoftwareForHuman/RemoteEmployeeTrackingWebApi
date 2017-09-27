@@ -1,0 +1,11 @@
+
+1) install dependencies
+composer install
+composer require "tymon/jwt-auth:*"
+php artisan migrate
+php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\JWTAuthServiceProvider"
+php artisan jwt:generate
+
+2) config .env
+open .env file in root folder
+set a db connection login, password, host
